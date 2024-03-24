@@ -1,16 +1,17 @@
 import React, { useState, useRef } from "react";
-
 import Axios from "axios";
+
 import People from '../../assets/people.svg'
 import Arrow from '../../assets/arrow.svg'
 
 import { Container, H1, Image, ContainerItens, InputLabel, Input, Button } from "./styles";
+import { useNavigate } from "react-router-dom";
+
 
 
 function App() {
-  //const users = [];
-
   const [users, setUsers] = useState([])
+  const navigate = useNavigate()
   const inputName = useRef()
   const inputAge = useRef()
 
@@ -23,6 +24,8 @@ function App() {
 
 
     setUsers([...users, newUser])
+
+    navigate('/usuarios')
 
   }
 
