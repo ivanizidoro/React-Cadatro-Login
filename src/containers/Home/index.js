@@ -4,8 +4,11 @@ import Axios from "axios";
 import People from '../../assets/people.svg'
 import Arrow from '../../assets/arrow.svg'
 
-import { Container, H1, Image, ContainerItens, InputLabel, Input, Button } from "./styles";
+import { Container, Image, InputLabel, Input } from "./styles";
 import { useNavigate } from "react-router-dom";
+import H1 from "../../components/Title";
+import ContainerItens from "../../components/ContainerItens"
+import Button from "../../components/Button"
 
 
 

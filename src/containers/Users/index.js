@@ -6,7 +6,10 @@ import Avatar from '../../assets/avatar.svg'
 import Arrow from '../../assets/arrow.svg'
 import Trash from '../../assets/trash.svg'
 
-import { Container, H1, Image, ContainerItens, Button, User } from "./styles";
+import { Container, Image, User } from "./styles";
+import H1 from "../../components/Title/";
+import ContainerItens from "../../components/ContainerItens";
+import Button from "../../components/Button";
 
 
 
@@ -35,7 +38,7 @@ function Users() {
 
   }
 
-  function goBackPage(){
+  function goBackPage() {
     navigate("/")
   }
 
@@ -43,7 +46,7 @@ function Users() {
   return (
     <Container>
       <Image alt="logo-img" src={Avatar} />
-      <ContainerItens>
+      <ContainerItens isBlur={true}>
         <H1>Usuários!</H1>
 
         <ul>
@@ -55,7 +58,7 @@ function Users() {
           ))}
         </ul>
 
-        <Button onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
           <img alt="seta" src={Arrow} /> Voltar
         </Button>
 
